@@ -38,9 +38,14 @@
   background-color: #04AA6D;
 }
 
-.TitleLine {
+.PageTitle {
   position: absolute;
-  width: 100%;
-  top: 75px;
-  height: 100px;
+  top : 50px;
+}
+
+.PageWriting * {
+  position: relative;
+  font-size : 16px;
+  font-style : normal;
+  font-weight: normal;
 }
