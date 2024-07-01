@@ -1,55 +1,77 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
   <head>
-    <title>
-      Riyos Pudasaini: Homepage
-    </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
+    <title>Riyos Pudasaini: Homepage</title>
   </head>
 
   <body>
-    <ul class="TopBar">
-      <li> <a href="index.html" class="Active"> Home Page </a></li>
-      <li> <a href="pics.html"> Photo Library </a></li>
-      <li> <a href="blog.html"> Blog Site </a></li>
-      <li> <a href="projects.html"> Project Showcase </a> </li>
-    </ul>
 
-    <div class="PageBox">
-      <h1 class="PageTitle"> About: Riyos Pudasaini
-        <p class="PageWriting">
-          I am a prospective Computer Science graduate student at Virginia Tech.
-          I received my Bachelor's of Science in Computer Science from Virginia Tech in May 2024.
-          This website contains various information about myself, my work, and my links if you'd like to connect. <br>
-          Thanks for stopping by!
-        </p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse top-bar" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pics.html">Photo Library</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-        <br>
+    <h1 class="text-center page-title"> About: Riyos Pudasaini </h1>
 
-        <figure id="linkedin" class="logo">
-          <img src="logos/linkedin.png" width="48" height="48">
-          <figcaption><a href="https://www.linkedin.com/in/riyos-p-607157253/" target="_blank" rel="noopener noreferrer">LinkedIn</a></figcaption>
-        </figure>
+    <p class="page-writing" >
+      I am a prospective Computer Science graduate student at Virginia Tech.
+      I received my Bachelor's of Science in Computer Science from Virginia Tech in May 2024.
+      This website contains various information about myself, my work, and my links if you'd like to connect. <br><br>
+      Thanks for stopping by!
+    </p>
 
-        <figure id="github" class="logo">
-          <img src="logos/github.png" width="80" height="45">
-          <figcaption><a href="https://github.com/r-pudasaini" target="_blank" rel="noopener noreferrer">GitHub</a></figcaption>
 
-        </figure>
+    <div class="container position-relative text-center translate-middle-y">
+      <div class="row">
+        <div class="col">
+          <figure>
+            <img src="logos/linkedin.png" width="48" height="48">
+            <figcaption><a href="https://www.linkedin.com/in/riyos-p-607157253/" target="_blank" rel="noopener noreferrer" class="links">LinkedIn</a></figcaption>
+          </figure>
+        </div>
 
-        <figure id="resume" class="logo">
-          <img src="logos/resume.png" width="48" height="48">
-          <figcaption><a href="pdfs/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></figcaption>
-        </figure>
+        <div class="col">
+          <figure>
+            <img src="logos/github.png" width="48" height="48">
+            <figcaption><a href="https://github.com/r-pudasaini" target="_blank" rel="noopener noreferrer" class="links">GitHub</a></figcaption>
+          </figure>
+        </div>
 
-      </h1>
-
+        <div class="col">
+          <figure>
+            <img src="logos/resume.png" width="48" height="48">
+            <figcaption><a href="pdfs/resume.pdf" target="_blank" rel="noopener noreferrer" class="links">Resume</a></figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
 
-  </body>
 
+    <!-- this must go at the end of the line before the close body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
 </html>

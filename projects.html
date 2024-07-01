@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
   <head>
-    <title> Riyos Pudasaini: Project Showcase </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <title> Riyos Pudasaini: Project Showcase </title>
   </head>
 
   <body>
 
-    <ul class="TopBar">
-      <li> <a href="index.html"> Home Page </a></li>
-      <li> <a href="pics.html"> Photo Library </a></li>
-      <li> <a href="blog.html"> Blog Site </a></li>
-      <li> <a href="projects.html" class="Active"> Project Showcase </a> </li>
-    </ul>
-
-    <div class="PageBox">
-      <h1 class="PageTitle"> Projects 
-        <div class="PageWriting">
-          <ul>
-            <li> An online chat game where two people can play a game of "Guess What Each Other Is Thinking".
-              The goal is for you and your partner to gather the lowest number of guesses. Scores will be displayed on a leaderboard.
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse top-bar" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
             </li>
-            <br>
-            <li> A command-line tool that can be used to generate a makefile for your project </li>
-            <br>
-            <li> A Media Scraper that scrapes the internet and presents the user with news articles </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pics.html">Photo Library</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="projects.html">Projects</a>
+            </li>
           </ul>
         </div>
-      </h1>
+      </div>
+    </nav>
+
+    <h1 class="page-title">Projects</h1>
+
+    <div class="page-writing">
+      <ul>
+        <li> An online chat game where two people can play a game of "Guess What Each Other Is Thinking".
+          The goal is for you and your partner to gather the lowest number of guesses. Scores will be displayed on a leaderboard.
+        </li>
+        <br>
+        <li> A command-line tool that can be used to generate a makefile for your project </li>
+        <br>
+        <li> A Media Scraper that scrapes the internet and presents the user with news articles </li>
+      </ul>
     </div>
 
   </body>
-
-
-
 </html>
