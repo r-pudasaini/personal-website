@@ -40,3 +40,86 @@ body {
   font-weight : bold;
 }
 
+
+.pcontainer
+{
+  position : relative;
+  min-height : 100vh;
+  background : #ddd;
+}
+
+.pcontainer .image-container
+{
+  display : flex;
+  flex-wrap : wrap;
+  gap : 15px;
+  justify-content : center;
+  padding : 10px;
+}
+
+.pcontainer .image-container .image
+{
+  height : 250px;
+  width : 350px;
+  border : 5px solid #fff;
+  box-shadow : 0px 5px 15px rgba(0, 0, 0, .1);
+  overflow : hidden;
+  cursor : pointer;
+}
+
+.pcontainer .image-container .image img 
+{
+  height : 100%;
+  width: 100%;
+  object-fit : cover;
+  transition : .2s linear;
+}
+
+.pcontainer .image-container .image:hover img
+{
+  transform : scale(1.1);
+}
+
+.pcontainer .popup-image
+{
+  position : fixed;
+  top : 0;
+  left : 0;
+  background : rgba(0, 0, 0, 0.9);
+  height : 100%;
+  width : 100%;
+  z-index : 100;
+  display : none;
+}
+
+.pcontainer .popup-image span
+{
+  position : absolute;
+  top : 50px;
+  right : 10px;
+  font-size : 50px;
+  font-weight : bolder;
+  color : #fff;
+  cursor : pointer;
+}
+
+.pcontainer .popup-image img
+{
+  position : absolute;
+  top : 50%;
+  left : 50%;
+  transform : translate(-50%, -50%);
+  border : 5px solid #fff;
+  border-radius : 5px;
+  width : 750px;
+  height : 750px;
+  object-fit : cover;
+}
+
+@media (max-width: 768px)
+{
+  .pcontainer .popup-image img 
+  {
+    width : 95px;
+  }
+}
