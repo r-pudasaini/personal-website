@@ -16,7 +16,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
         <div class="collapse navbar-collapse top-bar" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -42,33 +42,39 @@
 
     <div class="pcontainer" id=photo-library-container>
       <div class="image-container">
-        <div class="image"> <img src="pics/IMG_8076.JPG" width="448" height="336" class="img-responsive"> </div>
-        <div class="image"> <img src="pics/IMG_8120.JPG" width="336" height="448"> </div>
-        <div class="image"> <img src="pics/IMG_8188.JPG" width="448" height="336"> </div>
-        <div class="image"> <img src="pics/IMG_8230.JPG" width="336" height="448"> </div>
-        <div class="image"> <img src="pics/IMG_8296.JPG" width="336" height="448"> </div> 
+        <div class="image"> <img src="pics/IMG_8076.JPG" alt="A lovely view of Kathmandu from my Uncle's house" width="448" height="336" class="img-responsive"> </div>
+        <div class="image"> <img src="pics/IMG_8120.JPG" alt="A shot of a Nepali roadside" width="336" height="448"> </div>
+        <div class="image"> <img src="pics/IMG_8188.JPG" alt="A view of Kathmandu from one of its many mountains" width="448" height="336"> </div>
+        <div class="image"> <img src="pics/IMG_8230.JPG" alt="A cloud I saw while riding a cable car. Doesn't it look like an alligator?" width="336" height="448"> </div>
+        <div class="image"> <img src="pics/IMG_8296.JPG" alt="A sandwich I ate one morning" width="336" height="448"> </div>
       </div>
 
       <div class="popup-image">
         <span> &times; </span>
-        <img src="">
+        <figure>
+          <img src="">
+          <figcaption></figcaption>
+        </figure>
       </div>
 
     </div>
 
     <script>
-    document.querySelectorAll('.image-container img').forEach(image => 
+    document.querySelectorAll('.image-container img').forEach(image =>
     {
-      image.onclick = () => 
+      image.onclick = () =>
       {
         document.querySelector('.popup-image').style.display = 'block';
         document.querySelector('.popup-image img').src = image.getAttribute('src');
+        document.querySelector('.popup-image figcaption').textContent = image.getAttribute('alt');
+        document.querySelector('.navbar').style.display = 'none';
       }
     });
 
     document.querySelector('.popup-image span').onclick = () => 
     {
         document.querySelector('.popup-image').style.display = 'none';
+        document.querySelector('.navbar').style.display = 'block';
     }
     </script>
 

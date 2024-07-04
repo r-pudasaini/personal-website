@@ -95,7 +95,7 @@ body {
 .pcontainer .popup-image span
 {
   position : absolute;
-  top : 50px;
+  top : 0px;
   right : 10px;
   font-size : 50px;
   font-weight : bolder;
