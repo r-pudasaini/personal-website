@@ -82,9 +82,9 @@ body {
 
 .pcontainer .popup-image
 {
-  position : fixed;
   top : 0;
   left : 0;
+  position : fixed;
   background : rgba(0, 0, 0, 0.9);
   height : 100%;
   width : 100%;
@@ -103,30 +103,35 @@ body {
   cursor : pointer;
 }
 
-.pcontainer .popup-image img
+.pcontainer .popup-image figure 
 {
   position : absolute;
   top : 50%;
   left : 50%;
+  justify-content : center;
+  align-items : center;
   transform : translate(-50%, -50%);
+}
+
+.pcontainer .popup-image figure img
+{
+  max-height : 750px;
+  max-width : 750px;
+  object-fit : cover;
+  position : relative;
   border : 5px solid #fff;
   border-radius : 5px;
-  max-width : 750px;
-  max-height : 750px;
-  object-fit : cover;
 }
 
 .pcontainer .popup-image .popup-caption
 {
-  top : 75%;
-  margin : 0% 35% 0% 35%;
-  position : relative;
   font: 1em "Verdana", "Georgia", sans-serif;
   color : white;
-  background : rgba(0, 0, 0, 0.5);
+  font-weight : 600;
+  margin : 0% 20%;
 }
 
-@media (max-width: 768px)
+@media (max-width: 800px)
 {
   .pcontainer .popup-image img
   {
