@@ -51,10 +51,8 @@
 
       <div class="popup-image">
         <span> &times; </span>
-        <figure>
-          <img src="">
-          <figcaption></figcaption>
-        </figure>
+        <img src="">
+        <p class="popup-caption text-center"></p>
       </div>
 
     </div>
@@ -66,12 +64,12 @@
       {
         document.querySelector('.popup-image').style.display = 'block';
         document.querySelector('.popup-image img').src = image.getAttribute('src');
-        document.querySelector('.popup-image figcaption').textContent = image.getAttribute('alt');
+        document.querySelector('.popup-caption').textContent = image.getAttribute('alt');
         document.querySelector('.navbar').style.display = 'none';
       }
     });
 
-    document.querySelector('.popup-image span').onclick = () => 
+    document.querySelector('.popup-image span').onclick = () =>
     {
         document.querySelector('.popup-image').style.display = 'none';
         document.querySelector('.navbar').style.display = 'block';
