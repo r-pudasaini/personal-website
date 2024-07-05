@@ -42,15 +42,18 @@
 
     <div class="pcontainer" id=photo-library-container>
       <div class="image-container">
-        <div class="image"> <img src="pics/IMG_8076.JPG" alt="A lovely view of Kathmandu from my Uncle's house" width="448" height="336" class="img-responsive"> </div>
+        <div class="image"> <img src="pics/IMG_8076.JPG" alt="A view of Kathmandu from near my Uncle's house" width="448" height="336" class="img-responsive"> </div>
         <div class="image"> <img src="pics/IMG_8120.JPG" alt="A shot of a Nepali roadside" width="336" height="448"> </div>
         <div class="image"> <img src="pics/IMG_8188.JPG" alt="A view of Kathmandu from one of its many mountains" width="448" height="336"> </div>
-        <div class="image"> <img src="pics/IMG_8230.JPG" alt="A cloud I saw while riding a cable car. Doesn't it look like an Alligator?" width="336" height="448"> </div>
+        <div class="image"> <img src="pics/IMG_8230.JPG" alt="A cloud I saw while riding a cable car" width="336" height="448"> </div>
         <div class="image"> <img src="pics/IMG_8296.JPG" alt="A sandwich I ate one morning" width="336" height="448"> </div>
       </div>
 
       <div class="popup-image">
-        <span> &times; </span>
+        <span class="close"> &times; </span>
+        <span class="next"> &rarr; </span>
+        <span class="prev"'> &larr; </span>
+
         <figure>
           <img src="">
           <figcaption class="popup-caption text-center"></figcaption>
@@ -60,6 +63,7 @@
     </div>
 
     <script>
+
     document.querySelectorAll('.image-container img').forEach(image =>
     {
       image.onclick = () =>
@@ -71,11 +75,63 @@
       }
     });
 
-    document.querySelector('.popup-image span').onclick = () =>
+    document.querySelector('.popup-image .close').onclick = () =>
     {
         document.querySelector('.popup-image').style.display = 'none';
         document.querySelector('.navbar').style.display = 'block';
     }
+
+    document.querySelector('.popup-image .prev').onclick = () =>
+    {
+      let current_image = document.querySelector('.popup-image img');
+      let all_images = document.querySelectorAll('.image-container img');
+
+      for (let i = 0; i < all_images.length; i++)
+      {
+        if (current_image.src === all_images[i].src)
+        {
+          if (i == 0)
+          {
+            document.querySelector('.popup-image img').src = all_images[all_images.length - 1].src;
+            document.querySelector('.popup-caption').textContent = all_images[all_images.length - 1].alt;
+
+          }
+          else
+          {
+            document.querySelector('.popup-image img').src = all_images[i - 1].src;
+            document.querySelector('.popup-caption').textContent = all_images[i - 1].alt;
+          }
+
+          break;
+        }
+      }
+    }
+
+    document.querySelector('.popup-image .next').onclick = () =>
+    {
+      let current_image = document.querySelector('.popup-image img');
+      let all_images = document.querySelectorAll('.image-container img');
+
+      for (let i = 0; i < all_images.length; i++)
+      {
+        if (current_image.src === all_images[i].src)
+        {
+          if (i == all_images.length - 1)
+          {
+            document.querySelector('.popup-image img').src = all_images[0].src;
+            document.querySelector('.popup-caption').textContent = all_images[0].alt;
+          }
+          else
+          {
+            document.querySelector('.popup-image img').src = all_images[i + 1].src;
+            document.querySelector('.popup-caption').textContent = all_images[i + 1].alt;
+          }
+
+          break;
+        }
+      }
+    }
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
