@@ -167,7 +167,21 @@ body {
   font: 1em "Verdana", "Georgia", sans-serif;
   color : white;
   font-weight : 600;
-  margin : 0% 20%;
+  margin : 2% 20%;
+}
+
+.blog-posts
+{
+  list-style : none;
+}
+
+.blog-posts li
+{
+  border-style : solid;
+  border-color : black;
+  border-radius : 5px;
+  padding : 3% 0%;
+  margin : 3% 0% 3% 0%;
 }
 
 @media (max-width: 800px)
