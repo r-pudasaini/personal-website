@@ -40,6 +40,10 @@ body {
   font-weight : bold;
 }
 
+.no-bold
+{
+  font-weight : normal;
+}
 
 .pcontainer
 {
@@ -113,9 +117,9 @@ body {
 .pcontainer .popup-image .next
 {
   position : absolute;
-  top : 40%;
+  top : 50%;
   right : 0%;
-  margin : 0% 15% 0% 0%;
+  margin : 0% 10% 0% 0%;
 
   font-size : 50px;
   font-weight : bolder;
@@ -129,9 +133,9 @@ body {
 .pcontainer .popup-image .prev
 {
   position : absolute;
-  top : 40%;
+  top : 50%;
   left: 0%;
-  margin : 0% 0% 0% 15%;
+  margin : 0% 0% 0% 10%;
 
   font-size : 50px;
   font-weight : bolder;
@@ -180,8 +184,23 @@ body {
   border-style : solid;
   border-color : black;
   border-radius : 10px;
-  padding : 1% 0%;
-  margin : 1% 10%;
+  border-width : thin;
+  margin : 1% 10% 1% 10%;
+  padding : 1% 0% 0% 0%;
+}
+
+.blog-posts li:hover
+{
+  border-width : thick;
+  cursor : pointer;
+}
+
+.blog-posts li a
+{
+  font: 1em "Verdana", "Georgia", sans-serif;
+  font-style : bold;
+  text-decoration : none;
+  color : black;
 }
 
 @media (max-width: 800px)
