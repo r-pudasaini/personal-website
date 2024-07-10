@@ -1,60 +1,210 @@
 body {
-  background-color : #FFFFFF;
   background-color : #DBDBDB;
 }
 
-.TopBar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #222;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width : 100%;
-  height: 55px;
+.navbar .navbar-nav .nav-item .nav-link {
+  padding: 0.8em 1.5em;
+}
+.navbar .navbar-nav .nav-item:not(:last-child) .nav-link {
+  border-right: 2px solid #808080;
 }
 
-.TopBar > li {
-  float: left;
-  border-right: 1px solid #bbb;
-}
-
-
-.TopBar > li:last-child {
-  border-right: none;
-}
-
-
-.TopBar > li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 21px 20px;
-  text-decoration: none;
-  font: 13px "Verdana", "Georgia",  sans-serif;
-}
-
-.TopBar > li a:hover {
-  background-color: #111;
-}
-
-.Active {
-  background-color: #8511C4;
-}
-
-.PageTitle {
-  font: 32px "Verdana", "Georgia", sans-serif;
+.page-title {
+  font: 2em "Verdana", "Georgia", sans-serif;
   font-weight : bold;
-  position: absolute;
-  top : 60px;
+  text-align : center;
+  margin : 10% 0% 3% 0%;
 }
 
-.PageWriting * {
-  position: relative;
+.page-writing {
   font-style : normal;
   font-weight: normal;
-  font: 16px "Verdana", "Georgia", sans-serif;
-  top: 10px;
+  font: 1em "Verdana", "Georgia", sans-serif;
+  margin : 0% 25% 7% 25%;
+  text-align : center;
+}
+
+.date-line {
+  font-style : normal;
+  font-weight: normal;
+  font: 1.25em "Verdana", "Georgia", sans-serif;
+  margin : 0% 25% 3% 25%;
+  text-align : center;
+}
+
+.links, .links *
+{
+  text-decoration: none;
+  color : 4169e1;
+  font: "Verdana", "Georgia", sans-serif;
+  font-weight : bold;
+}
+
+.no-bold
+{
+  font-weight : normal;
+}
+
+.pcontainer
+{
+  position : relative;
+  min-height : 100vh;
+  background : #ddd;
+}
+
+.pcontainer .image-container
+{
+  display : flex;
+  flex-wrap : wrap;
+  gap : 15px;
+  justify-content : center;
+  padding : 10px;
+}
+
+.pcontainer .image-container .image
+{
+  height : 250px;
+  width : 350px;
+  border : 5px solid #fff;
+  box-shadow : 0px 5px 15px rgba(0, 0, 0, .1);
+  overflow : hidden;
+  cursor : pointer;
+}
+
+.pcontainer .image-container .image img 
+{
+  height : 100%;
+  width: 100%;
+  object-fit : cover;
+  transition : .2s linear;
+}
+
+.pcontainer .image-container .image:hover img
+{
+  transform : scale(1.1);
+}
+
+.pcontainer .popup-image
+{
+  top : 0;
+  left : 0;
+  position : fixed;
+  background : rgba(0, 0, 0, 0.9);
+  height : 100%;
+  width : 100%;
+  z-index : 100;
+  display : none;
+  justify-content : center;
+  align-items : center;
+}
+
+.pcontainer .popup-image .close
+{
+  position : absolute;
+  top : 0px;
+  right : 0px;
+  margin : 2% 2% 0% 0%;
+
+  font-size : 50px;
+  font-weight : bolder;
+  color : #fff;
+  cursor : pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pcontainer .popup-image .next
+{
+  position : absolute;
+  top : 40%;
+  right : 0%;
+  margin : 0% 10% 0% 0%;
+
+  font-size : 50px;
+  font-weight : bolder;
+  color : #fff;
+  cursor : pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pcontainer .popup-image .prev
+{
+  position : absolute;
+  top : 40%;
+  left: 0%;
+  margin : 0% 0% 0% 10%;
+
+  font-size : 50px;
+  font-weight : bolder;
+  color : #fff;
+  cursor : pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pcontainer .popup-image figure
+{
+  position : absolute;
+  top : 50%;
+  left : 50%;
+  justify-content : center;
+  align-items : center;
+  transform : translate(-50%, -50%);
+}
+
+.pcontainer .popup-image figure img
+{
+  max-height : 750px;
+  max-width : 750px;
+  object-fit : cover;
+  position : relative;
+  border : 5px solid #fff;
+  border-radius : 5px;
+}
+
+.pcontainer .popup-image .popup-caption
+{
+  font: 1em "Verdana", "Georgia", sans-serif;
+  color : white;
+  font-weight : 600;
+  margin : 2% 20%;
+}
+
+.blog-posts
+{
+  margin : 1% 15% 1% 15%;
+  border-style : solid;
+  border-color : black;
+  border-radius : 10px;
+  background-color : #999999;
+  cursor : pointer;
+}
+
+.blog-posts .title
+{
+  font: 1.125em "Verdana", "Georgia", sans-serif;
+  padding : 1% 0% 1% 0%;
+}
+
+.blog-posts .date
+{
+  font: 0.875em "Verdana", "Georgia", sans-serif;
+  padding : 1% 0% 1% 0%;
+}
+
+.blog-posts:hover
+{
+  border-color : blue;
+}
+
+@media (max-width: 800px)
+{
+  .pcontainer .popup-image img
+  {
+    width : 95px;
+  }
 }
