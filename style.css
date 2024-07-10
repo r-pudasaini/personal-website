@@ -117,7 +117,7 @@ body {
 .pcontainer .popup-image .next
 {
   position : absolute;
-  top : 50%;
+  top : 40%;
   right : 0%;
   margin : 0% 10% 0% 0%;
 
@@ -133,7 +133,7 @@ body {
 .pcontainer .popup-image .prev
 {
   position : absolute;
-  top : 50%;
+  top : 40%;
   left: 0%;
   margin : 0% 0% 0% 10%;
 
@@ -176,31 +176,29 @@ body {
 
 .blog-posts
 {
-  list-style : none;
-}
-
-.blog-posts li
-{
+  margin : 1% 15% 1% 15%;
   border-style : solid;
   border-color : black;
   border-radius : 10px;
-  border-width : thin;
-  margin : 1% 10% 1% 10%;
-  padding : 1% 0% 0% 0%;
-}
-
-.blog-posts li:hover
-{
-  border-width : thick;
+  background-color : #999999;
   cursor : pointer;
 }
 
-.blog-posts li a
+.blog-posts .title
 {
-  font: 1em "Verdana", "Georgia", sans-serif;
-  font-style : bold;
-  text-decoration : none;
-  color : black;
+  font: 1.125em "Verdana", "Georgia", sans-serif;
+  padding : 1% 0% 1% 0%;
+}
+
+.blog-posts .date
+{
+  font: 0.875em "Verdana", "Georgia", sans-serif;
+  padding : 1% 0% 1% 0%;
+}
+
+.blog-posts:hover
+{
+  border-color : blue;
 }
 
 @media (max-width: 800px)
