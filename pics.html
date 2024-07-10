@@ -38,7 +38,7 @@
     </nav>
 
     <h1 class="page-title"> Photo Gallery </h1>
-    <div class="page-writing"> Some meaningful pictures I've taken over the years. For a nicer viewing experience, consider setting your browser's zoom to around 100%</div>
+    <div class="page-writing"> Some meaningful pictures I've collected over the years. You may need to zoom your browser out to see some pictures better. </div>
 
     <div class="pcontainer" id=photo-library-container>
       <div class="image-container">
@@ -46,11 +46,13 @@
         <div class="image"> <img src="pics/IMG_8120.JPG" alt="A shot of a Nepali roadside" index="1"> </div>
         <div class="image"> <img src="pics/IMG_8188.JPG" alt="A view of Kathmandu from one of its many mountains" index="2"> </div>
         <div class="image"> <img src="pics/IMG_8230.JPG" alt="A cloud I saw while riding a cable car" index="3"> </div>
-
+        <div class="image"> <img src="pics/IMG_0206.JPG" alt="A street view of St. Louis, Missouri" index="4"> </div>
         <div class="image"> <img src="pics/IMG_7434.JPG" alt="A beautiful sunset sky at Virginia Tech" index="5"> </div>
         <div class="image"> <img src="pics/IMG_7295.JPG" alt="A street view of Toronto City, Canada" index="6"> </div>
         <div class="image"> <img src="pics/IMG_7096.JPG" alt="A rainbow I saw near my dorm once." index="7"> </div>
         <div class="image"> <img src="pics/IMG_6484.JPG" alt="A shot of Manhattan, New York City, from the Empire State Building" index="8"> </div>
+        <div class="image"> <img src="pics/IMG_1200.JPG" alt="Niagra Falls, New York Side" index="9"> </div>
+        <div class="image"> <img src="pics/IMG_1454.JPG" alt="From the top of a Farris Wheel at a Christmas carnival" index="10"> </div>
       </div>
 
       <div class="popup-image">
@@ -66,65 +68,7 @@
 
     </div>
 
-    <script>
-    let indexy = -1;
-
-    document.querySelectorAll('.image-container img').forEach(image =>
-    {
-      image.onclick = () =>
-      {
-        document.querySelector('.popup-image').style.display = 'block';
-        document.querySelector('.popup-image img').src = image.getAttribute('src');
-        indexy = Number(image.getAttribute('index'));
-        document.querySelector('.popup-caption').textContent = image.getAttribute('alt');
-        document.querySelector('.navbar').style.display = 'none';
-      }
-    });
-
-    document.querySelector('.popup-image .close').onclick = () =>
-    {
-        document.querySelector('.popup-image').style.display = 'none';
-        document.querySelector('.navbar').style.display = 'block';
-    }
-
-    document.querySelector('.popup-image .prev').onclick = () =>
-    {
-      let current_image = document.querySelector('.popup-image img');
-      let all_images = document.querySelectorAll('.image-container img');
-
-      if (indexy == 0)
-      {
-        indexy = all_images.length - 1;
-      }
-      else
-      {
-        indexy = indexy - 1;
-      }
-
-      document.querySelector('.popup-image img').src = all_images[indexy].getAttribute('src');
-      document.querySelector('.popup-caption').textContent = all_images[indexy].getAttribute('alt');
-    }
-
-    document.querySelector('.popup-image .next').onclick = () =>
-    {
-      let current_image = document.querySelector('.popup-image img');
-      let all_images = document.querySelectorAll('.image-container img');
-
-      if (indexy == all_images.length - 1)
-      {
-        indexy = 0;
-      }
-      else
-      {
-        indexy = indexy + 1;
-      }
-
-      document.querySelector('.popup-image img').src = all_images[indexy].getAttribute('src');
-      document.querySelector('.popup-caption').textContent = all_images[indexy].getAttribute('alt');
-    }
-
-    </script>
-
+    <script src="image.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
