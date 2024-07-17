@@ -32,6 +32,18 @@ body {
   text-align : center;
 }
 
+.link-table 
+{
+  padding-top : 2%;
+  padding-bottom : 2%;
+}
+
+.link-table .row 
+{
+  padding-top : 2%;
+  padding-bottom : 2%;
+}
+
 .links, .links *
 {
   text-decoration: none;
@@ -71,7 +83,7 @@ body {
   cursor : pointer;
 }
 
-.pcontainer .image-container .image img 
+.pcontainer .image-container .image img
 {
   height : 100%;
   width: 100%;
@@ -101,27 +113,11 @@ body {
 .pcontainer .popup-image .close
 {
   position : absolute;
-  top : 0px;
-  right : 0px;
-  margin : 2% 2% 0% 0%;
+  top : 0;
+  right : 0;
+  margin : 1% 2% 0% 0%;
 
-  font-size : 50px;
-  font-weight : bolder;
-  color : #fff;
-  cursor : pointer;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.pcontainer .popup-image .next
-{
-  position : absolute;
-  top : 40%;
-  right : 0%;
-  margin : 0% 10% 0% 0%;
-
-  font-size : 50px;
+  font-size : 5vw;
   font-weight : bolder;
   color : #fff;
   cursor : pointer;
@@ -132,12 +128,24 @@ body {
 
 .pcontainer .popup-image .prev
 {
-  position : absolute;
+  position : relative;
   top : 40%;
-  left: 0%;
-  margin : 0% 0% 0% 10%;
+  left : 10%;
+  font-size : 5vw;
+  font-weight : bolder;
+  color : #fff;
+  cursor : pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
-  font-size : 50px;
+.pcontainer .popup-image .next
+{
+  position : relative;
+  top : 40%;
+  left: 70%;
+  font-size : 5vw;
   font-weight : bolder;
   color : #fff;
   cursor : pointer;
@@ -158,17 +166,16 @@ body {
 
 .pcontainer .popup-image figure img
 {
-  max-height : 750px;
-  max-width : 750px;
+  max-height : 80%;
+  max-width : 80%;
   object-fit : cover;
-  position : relative;
-  border : 5px solid #fff;
-  border-radius : 5px;
+  border : 0.50vw solid #fff;
+  border-radius : 0.50vw;
 }
 
 .pcontainer .popup-image .popup-caption
 {
-  font: 1em "Verdana", "Georgia", sans-serif;
+  font: 1vw "Verdana", "Georgia", sans-serif;
   color : white;
   font-weight : 600;
   margin : 2% 20%;
@@ -199,12 +206,4 @@ body {
 .blog-posts:hover
 {
   border-color : blue;
-}
-
-@media (max-width: 800px)
-{
-  .pcontainer .popup-image img
-  {
-    width : 95px;
-  }
 }
