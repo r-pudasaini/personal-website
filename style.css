@@ -166,6 +166,7 @@ body {
 
 .pcontainer .popup-image figure img
 {
+  position : relative;
   max-height : 80%;
   max-width : 80%;
   object-fit : cover;
@@ -175,10 +176,12 @@ body {
 
 .pcontainer .popup-image .popup-caption
 {
+  position : relative;
   font: 1vw "Verdana", "Georgia", sans-serif;
   color : white;
   font-weight : 600;
-  margin : 2% 20%;
+  margin : 2% 0% 2% 0%;
+  max-width : 80%;
 }
 
 .blog-posts
