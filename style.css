@@ -129,7 +129,7 @@ body {
 .pcontainer .popup-image .prev
 {
   position : relative;
-  top : 40%;
+  top : 50%;
   left : 10%;
   font-size : 5vw;
   font-weight : bolder;
@@ -143,7 +143,7 @@ body {
 .pcontainer .popup-image .next
 {
   position : relative;
-  top : 40%;
+  top : 50%;
   left: 70%;
   font-size : 5vw;
   font-weight : bolder;
@@ -167,8 +167,8 @@ body {
 .pcontainer .popup-image figure img
 {
   position : relative;
-  max-height : 80%;
-  max-width : 80%;
+  height : 80%;
+  width : 80%;
   object-fit : cover;
   border : 0.50vw solid #fff;
   border-radius : 0.50vw;
@@ -209,4 +209,19 @@ body {
 .blog-posts:hover
 {
   border-color : blue;
+}
+
+.menu-button
+{
+  position : relative;
+  max-height : 15% !important;
+  left : 1%;
+}
+
+@media (max-height: 500px)
+{
+  .page-title
+  {
+    margin-top : 20%;
+  }
 }
