@@ -221,26 +221,38 @@ body {
   left : 1%;
 }
 
-@media (max-height: 500px)
+@media (max-height: 500px), (max-width : 900px)
 {
   .page-title
   {
     margin-top : 20%;
   }
+  .link-table
+  {
+    padding-top : 5%;
+  }
 }
 
-@media (max-height : 350px)
+@media (max-height : 350px), (max-width : 750px)
 {
   .page-title
   {
     margin-top : 30%;
   }
+  .link-table
+  {
+    padding-top : 10%;
+  }
 }
 
-@media (max-height : 150px)
+@media (max-height : 150px), (max-width : 600px)
 {
   .page-title
   {
-    margin-top : 40%;
+    margin-top : 35%;
+  }
+  .link-table
+  {
+    padding-top : 15%;
   }
 }
