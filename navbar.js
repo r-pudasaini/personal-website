@@ -5,10 +5,8 @@
   nav-bar together as we continue.
 */
 
-
-let index = Number(document.querySelector('#navbar-script').getAttribute('index'));
-
 const PAGE_LINKS = [ `href="index.html">Home</a>`, `href="pics.html">Photo Gallery</a>` , `href="blog.html">Blog</a>`, `href="projects.html">Projects</a>`];
+const BLOG_PAGE_LINKS = [ `href="../index.html">Home</a>`, `href="../pics.html">Photo Gallery</a>` , `href="../blog.html">Blog</a>`, `href="../projects.html">Projects</a>`];
 
 const LIST_TAG = `<li class="nav-item"> <a class="nav-link`;
 const LIST_END_TAG = `</li>`
@@ -31,9 +29,13 @@ const HTML_END = `
   </nav>
 `;
 
+let index = Number(document.querySelector('#navbar-script').getAttribute('index'));
+let isBlogPost = document.querySelector('#navbar-script').getAttribute('blog-post');
+
+let page_links = isBlogPost === null ? PAGE_LINKS : BLOG_PAGE_LINKS;
 let html_str = HTML_BEGIN;
 
-for (var i = 0; i < PAGE_LINKS.length; i++)
+for (var i = 0; i < page_links.length; i++)
 {
   html_str += LIST_TAG;
 
@@ -42,7 +44,7 @@ for (var i = 0; i < PAGE_LINKS.length; i++)
     html_str += ` active`;
   }
 
-  html_str += `" ` + PAGE_LINKS[i] + LIST_END_TAG;
+  html_str += `" ` + page_links[i] + LIST_END_TAG;
 }
 
 html_str += HTML_END;

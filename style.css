@@ -130,7 +130,7 @@ body {
 {
   position : relative;
   top : 50%;
-  left : 10%;
+  left : 18%;
   font-size : 5vw;
   font-weight : bolder;
   color : #fff;
@@ -144,7 +144,7 @@ body {
 {
   position : relative;
   top : 50%;
-  left: 70%;
+  left: 72%;
   font-size : 5vw;
   font-weight : bolder;
   color : #fff;
@@ -167,11 +167,15 @@ body {
 .pcontainer .popup-image figure img
 {
   position : relative;
-  height : 80%;
-  width : 80%;
   object-fit : cover;
   border : 0.50vw solid #fff;
   border-radius : 0.50vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  height : auto;
+
 }
 
 .pcontainer .popup-image .popup-caption
@@ -181,12 +185,11 @@ body {
   color : white;
   font-weight : 600;
   margin : 2% 0% 2% 0%;
-  max-width : 80%;
 }
 
 .blog-posts
 {
-  margin : 1% 15% 1% 15%;
+  margin : 1% 10% 1% 10%;
   border-style : solid;
   border-color : black;
   border-radius : 10px;
@@ -226,10 +229,18 @@ body {
   }
 }
 
-@media (max-height : 200px)
+@media (max-height : 350px)
 {
   .page-title
   {
     margin-top : 30%;
+  }
+}
+
+@media (max-height : 150px)
+{
+  .page-title
+  {
+    margin-top : 40%;
   }
 }
